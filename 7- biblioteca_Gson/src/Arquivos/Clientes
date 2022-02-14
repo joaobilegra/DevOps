@@ -1,0 +1,32 @@
+[
+  {
+    "nome": "joao",
+    "id": 1,
+    "nemprestimo": 0,
+    "nlivro": 0
+  },
+  {
+    "nome": "jurandir",
+    "id": 2,
+    "nemprestimo": 0,
+    "nlivro": 0
+  },
+  {
+    "nome": "jabinelson",
+    "id": 3,
+    "nemprestimo": 0,
+    "nlivro": 0
+  },
+  {
+    "nome": "jaqtelson",
+    "id": 4,
+    "nemprestimo": 0,
+    "nlivro": 0
+  },
+  {
+    "nome": "jubitinga",
+    "id": 5,
+    "nemprestimo": 0,
+    "nlivro": 0
+  }
+]
