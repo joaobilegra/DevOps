@@ -1,0 +1,175 @@
+[
+  {
+    "inicioE": {
+      "year": 2022,
+      "month": 1,
+      "day": 26
+    },
+    "entregaE": {
+      "year": 2022,
+      "month": 1,
+      "day": 26
+    },
+    "diasAt": 30,
+    "multa": 150.0,
+    "livro": {
+      "id": 3,
+      "titulo": "Naruto",
+      "autor": "kishimoto",
+      "status": true
+    },
+    "cliente": {
+      "nome": "jaqtelson",
+      "id": 4,
+      "nemprestimo": 4,
+      "nlivro": 3
+    }
+  },
+  {
+    "inicioE": {
+      "year": 2021,
+      "month": 12,
+      "day": 15
+    },
+    "diasAt": 0,
+    "multa": 0.0,
+    "livro": {
+      "id": 2,
+      "titulo": "Berserk",
+      "autor": "miura",
+      "status": true
+    },
+    "cliente": {
+      "nome": "jaqtelson",
+      "id": 4,
+      "nemprestimo": 4,
+      "nlivro": 3
+    }
+  },
+  {
+    "inicioE": {
+      "year": 2021,
+      "month": 12,
+      "day": 27
+    },
+    "diasAt": 0,
+    "multa": 0.0,
+    "livro": {
+      "id": 7,
+      "titulo": "Vingadores",
+      "autor": "Stan Lee",
+      "status": true
+    },
+    "cliente": {
+      "nome": "jaqtelson",
+      "id": 4,
+      "nemprestimo": 4,
+      "nlivro": 3
+    }
+  },
+  {
+    "inicioE": {
+      "year": 2021,
+      "month": 12,
+      "day": 19
+    },
+    "diasAt": 0,
+    "multa": 0.0,
+    "livro": {
+      "id": 5,
+      "titulo": "HunterxHunter",
+      "autor": "Togashi",
+      "status": true
+    },
+    "cliente": {
+      "nome": "jurandir",
+      "id": 2,
+      "nemprestimo": 2,
+      "nlivro": 2
+    }
+  },
+  {
+    "inicioE": {
+      "year": 2021,
+      "month": 12,
+      "day": 27
+    },
+    "diasAt": 0,
+    "multa": 0.0,
+    "livro": {
+      "id": 6,
+      "titulo": "Mutantes",
+      "autor": "RecordTV",
+      "status": true
+    },
+    "cliente": {
+      "nome": "jurandir",
+      "id": 2,
+      "nemprestimo": 2,
+      "nlivro": 2
+    }
+  },
+  {
+    "inicioE": {
+      "year": 2021,
+      "month": 12,
+      "day": 27
+    },
+    "diasAt": 0,
+    "multa": 0.0,
+    "livro": {
+      "id": 8,
+      "titulo": "O senhor dos aneis",
+      "autor": "J. R. R. Tolkien ",
+      "status": true
+    },
+    "cliente": {
+      "nome": "jabinelson",
+      "id": 3,
+      "nemprestimo": 2,
+      "nlivro": 2
+    }
+  },
+  {
+    "inicioE": {
+      "year": 2021,
+      "month": 12,
+      "day": 27
+    },
+    "diasAt": 0,
+    "multa": 0.0,
+    "livro": {
+      "id": 9,
+      "titulo": "Batman",
+      "autor": "Bob Kane",
+      "status": true
+    },
+    "cliente": {
+      "nome": "jabinelson",
+      "id": 3,
+      "nemprestimo": 2,
+      "nlivro": 2
+    }
+  },
+  {
+    "inicioE": {
+      "year": 2021,
+      "month": 12,
+      "day": 27
+    },
+    "diasAt": 0,
+    "multa": 0.0,
+    "livro": {
+      "id": 10,
+      "titulo": "x-Men",
+      "autor": "Stan Lee",
+      "status": true
+    },
+    "cliente": {
+      "nome": "jubitinga",
+      "id": 5,
+      "nemprestimo": 1,
+      "nlivro": 1
+    }
+  }
+]

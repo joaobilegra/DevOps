@@ -1,0 +1,56 @@
+[
+  {
+    "id": 2,
+    "titulo": "Berserk",
+    "autor": "miura",
+    "status": false
+  },
+  {
+    "id": 3,
+    "titulo": "Naruto",
+    "autor": "kishimoto",
+    "status": false
+  },
+  {
+    "id": 4,
+    "titulo": "kimetsu no yaiba",
+    "autor": "Koyoharu",
+    "status": false
+  },
+  {
+    "id": 5,
+    "titulo": "HunterxHunter",
+    "autor": "Togashi",
+    "status": false
+  },
+  {
+    "id": 6,
+    "titulo": "Mutantes",
+    "autor": "RecordTV",
+    "status": false
+  },
+  {
+    "id": 7,
+    "titulo": "Vingadores",
+    "autor": "Stan Lee",
+    "status": false
+  },
+  {
+    "id": 8,
+    "titulo": "O senhor dos aneis",
+    "autor": "J. R. R. Tolkien ",
+    "status": false
+  },
+  {
+    "id": 9,
+    "titulo": "Batman",
+    "autor": "Bob Kane",
+    "status": false
+  },
+  {
+    "id": 10,
+    "titulo": "x-Men",
+    "autor": "Stan Lee",
+    "status": false
+  }
+]
