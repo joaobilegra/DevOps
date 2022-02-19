@@ -1,0 +1,22 @@
+
+
+
+***********************DEVOPS ****************************************
+echo "5*7" | bc -
+"bc" calculadora do linux para realizar as operações
+./(nome do arquivo sh) - executa o script
+bat (nomedoarquivo)- mostra arquivo com mais detalhes de cores e etc
+echo "Welcome to DevoPS class" | sed 's/class/team/' - troca "class" por "team"
+convert nomeimagem.jpg nomeimagem.png- converte imagem de "jpg" para "png"
+nano nomedoarquivo.sh- abre um interpretador de texto com nome do arquivo escolhido pode ser usada para criar script
+
+
+
+
+
+*****INSTALAR O imagemagick***********
+sudo apt-get update
+sudo apt-get install imagemagick
+********INSTALAR ZIP ***********
+sudo apt install unzip
+sudo apt-get install zip

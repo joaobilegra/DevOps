@@ -1,0 +1,68 @@
+*******CURSO LINUX *********
+
+pwd - mostra em que diretorio eu estou
+ls- mostra os arquivos e diretorios de onde estou
+echo "bem vindo"- repetir bem vindo na linha de comando
+echo "bem vindo"> bemvindo.txt- cria um arquivo txt escrito "BEM VINDO"
+cat bemvindo.txt - exibe a msg que está escrita no txt.
+ls -l   - mostra detalhes dos arquivos e diretorios onde estou.
+ls -la  - mostra arquivos e diretorios ocultos.
+cd Desktop- entrar no diretorio de "Desktop"
+echo "bem vindo2">> bemvindo.txt- adiciona "BEM VINDO 2"no arquivo já existente sem sobrescrever o que já tinha
+
+cd ..- volta pro diretorio anterior
+cd~ - vola diretorio raiz
+mkdir workspace - cria um diretorio chamado workspace
+rmdir workspace- remove diretorio.
+rm bemvindo.txt- remove arquivo
+cat *.txt - le todos os arquivos txt dentro do diretorio.
+rm -r workspace - remove todos os arquivos dentro do diretorio e o diretorio.
+mv- troca o nome de um arquivo.
+mv bemvindo.txt projetos-java/bemvindo.txt - move o arquivo para o diretorio escolhido.
+
+cp bemvindo2.txt projeto-ph/- copia um arquivo para o diretorio desejado
+cp bemvindo.txt mensagem.txt  - copia um arquivo crindo novo arquivo com nome desejado.
+cp -r projetos-java  projetos-c   - copia recursivamente os arquivos que estão em projeto java para projetos c
+zip - r work.zip(nomedoarquivozip) workspace/   - compactando arquivos de um diretorio.
+unzip work.zip(nomedoarquivozip) - descompactar arquivo ou diretorio.
+unzip -q work.zip(nomedoarquivozip) - descompacta modo silencioso. 
+zip - rq work.zip(nomedoarquivozip) workspace/- compactando diretorio modo silencioso
+zip bemvindo.zip *.txt - compacta todos so arquivos txt dentro de um arquivo zip chamando bemvindo.zip 
+unzip -l work.zip - lista os arquivos e diretorios compactados no arquivo
+
+
+tar -cz workscpace/> work.tar.gz - compactar o diretorio workscpace  "z"(tipozip) "tar" por padrao é recursivo 
+tar -xz < work.tar.gz - descompactar arquivo
+tar -vxz < work.tar.gz - descompactar arquivo com detalhes do que está sendo feito
+tar -czf work.tar.gz workspace/ - compacta sem precisar de direcionamento
+tar -xzf work.tar.gz - descompacta sem precisar de direcionamento
+
+touch bemvindo.txt - só encosta no arquivo para que aparece nos log que houve uma modificação.
+head bemvindo.txt- mostra só as primeiras 10 linhas do arquivo
+head -n 3(numerodelinhas) bemvindo.txt- mostras o número de linhas desejado começo/fim, nesse caso seria 3
+tail -n 3(numerodelinhas) bemvindo.txt- mostra o número de linhas desejado fim/começo
+less bemvindo.txt - abre o arquivo mostra o que tem dentro
+vi bemvindo.txt - abre o arquivo para edição usar "i" entrar no modo de edição, "esc" para sair, ":w" para salvar as alterações , ":q" para sair do vi
+"x" apaga o caracter atual, 3(número de caracteres para ser removido) x , ":q!" sair sem salvar alterações, ":wq" salva e sai do vi
+
+***********************DEVOPS ****************************************
+echo "5*7" | bc -  "bc" calculadora do linux para realizar as operações
+./(nome do arquivo sh) - executa o script
+bat (nomedoarquivo)- mostra arquivo com mais detalhes de cores e etc
+echo "Welcome to DevoPS class" | sed 's/class/team/' - troca "class" por "team"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
