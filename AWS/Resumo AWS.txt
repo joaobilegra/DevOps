@@ -1,0 +1,144 @@
+﻿Resumo AWS
+
+
+Pilares
+Data storage, Networking, Machine learning , Security and  identity, Compute, DataBases, Management and Governance. 
+
+
+Modelos de nuvem:
+  
+
+
+
+  
+
+  
+
+
+
+Security and Identity
+* IAM
+O AWS Identity and Access Management (IAM) fornece controle de acesso refinado em toda a AWS. Com o IAM, é possível especificar quem pode acessar quais serviços e recursos e em que condições. Com as políticas do IAM, você gerencia permissões para seu quadro de funcionários e sistemas para garantir permissões com privilégios mínimos.
+
+
+Com IAM você pode criar políticas de segurança para determinados grupos, e então adicionar users IAM a esse grupo, assim ele ficará limitado ao que a política de segurança daquele grupo permite( serviços que esse grupo tem acesso).
+
+
+* Secrets Manager
+Com Secrets Manager você não precisa mais salvar senhas em seu código.
+Em seu código você faz uma solicitação  para SM, ele lhe retorna sua senha, para que seja realizada a conexão.
+  
+
+
+
+
+
+
+
+
+
+AWS Directory Service
+O AWS Directory Service fornece várias maneiras de usar o Microsoft Active Directory (AD) com outros serviços AWS. Diretórios armazenam informações sobre usuários, grupos e dispositivos, e os administradores as usam para gerenciar o acesso a informações e recursos. O AWS Directory Service fornece várias opções de diretório para clientes que desejam usar aplicativos de reconhecimento de AD ou LDAP (Lightweight Directory Access Protocol, protocolo de acesso ao diretório leve) existentes na nuvem. Ele também oferece essas mesmas opções para desenvolvedores que precisam de um diretório para gerenciar usuários, grupos, dispositivos e acesso.
+
+
+Computer
+
+
+* EC2
+O Amazon Elastic Compute Cloud (Amazon EC2) oferece uma capacidade de computação escalável na Nuvem da Amazon Web Services (AWS). O uso do Amazon EC2 elimina a necessidade de investir em hardware inicialmente, portanto, você pode desenvolver e implantar aplicativos com mais rapidez. É possível usar o Amazon EC2 para executar quantos servidores virtuais forem necessários, configurar a segurança e as redes e gerenciar o armazenamento. O Amazon EC2 permite aumentar ou reduzir a escala para lidar com alterações nos requisitos ou com picos em popularidade, reduzindo sua necessidade de prever o tráfego.
+
+
+        O Amazon EC2 fornece os seguintes recursos:
+* Ambientes de computação virtual, conhecidos como instâncias
+* Os modelos pré-configurados para suas instâncias, conhecidos como Imagens de máquina da Amazon (AMIs), que empacotam os bits de que você precisa para seu servidor (incluindo o sistema operacional e software adicional)
+* Várias configurações de capacidade de CPU, memória, armazenamento e redes para suas instâncias, conhecidas como tipos de instância
+* Informações seguras de login para suas instâncias usando pares de chave (a AWS armazena a chave pública e você armazena a chave privada em um lugar seguro)
+* Volumes de armazenamento para dados temporários que são excluídos quando você interrompe, hiberna ou encerra sua instância, conhecidos como volumes de armazenamento de instâncias
+* Volumes de armazenamento persistentes para seus dados usando o Amazon Elastic Block Store (Amazon EBS), conhecidos como volumes do Amazon EBS
+* Vários locais físicos para seus recursos, como instâncias e volumes do Amazon EBS, conhecidos como regiões e zonas de disponibilidade
+* Um firewall que permite especificar os protocolos, portas e intervalos de IPs de origem que podem acessar suas instâncias usando grupos de segurança
+* Os endereços IPv4 estáticos para computação em nuvem dinâmica, conhecidos como endereços IP elásticos
+* Metadados, conhecidos como tags, que você pode criar e atribuir aos recursos do Amazon EC2
+* Redes virtuais isoladas logicamente do restante da Nuvem AWS que você pode criar e, opcionalmente, conectar à sua própria rede, conhecida como nuvens virtuais privadas (VPCs)
+EC2 Auto Scaling
+É quando você está adicionando ou removendo servidores sob demanda.
+Vertical Scaling
+Atualizando instâncias ec2, mais memórias ram, mais processamento(CPU).
+         Horizontal Scaling
+         Adicionando ou removendo instâncias. 
+
+
+
+
+
+
+Containers
+Os containers empacotam seu código com os arquivos de configuração e dependências que são necessários para a execução consistente em qualquer ambiente.
+Exemplo:
+Empacotam seu código junto com as bibliotecas externas necessárias na mesma versão em que o código foi desenvolvido.
+Lambda
+O AWS Lambda é um serviço de computação sem servidor e orientado a eventos que permite executar código para praticamente qualquer tipo de aplicação ou serviço de backend sem provisionar e gerenciar servidores. Você pode acionar o Lambda a partir de mais de 200 serviços da AWS e aplicações de software como serviço (SaaS) e pagar apenas pelo que usar.
+  
+
+Data Storage:
+Tipo arquivo:
+EFS
+Com o Amazon EFS, você poderá ter um serviço que oferece um sistema de arquivos em formato NFS hospedado de forma nativa na nuvem, sendo totalmente escalável e também elástico.
+Quer entende melhor como o Amazon EFS irá auxiliar no cotidiano do desenvolvimento do seu projeto? Acompanhe o artigo e saiba quais são os principais benefícios e vantagens.
+Com o Amazon Elastic File Systema (Amazon EFS) você consegue gerenciar para o uso na nuvem AWS e com todos os recursos localmente. Além disso, o sistema de arquivos conhecido como NFS é totalmente escalável, simples e elástico.
+A sua criação foi pensada para que você consiga desenvolver sob demanda em uma escala de até petabytes.
+Desta forma, você terá aplicativos que não sofrem interrupções e que podem aumentar ou diminuir conforme você adiciona ou remove arquivos, eliminado, também, a necessidade de um gerenciamento constante.
+O Amazon EFS também foi desenvolvido pensando na necessidade de projetos que compartilham dados de forma massiva, e permite que você acesse de forma paralela diversas instâncias EC2.
+Os principais usos do Amazon EFS são: diretórios pessoais, aplicativos para empresas que são considerados críticos e ainda para clientes que desejam elevar e mudar os softwares atuais de sua empresa para a nuvem.
+FSX
+O Amazon FSx for Windows File Server fornece armazenamento de arquivos totalmente gerenciado, altamente confiável e escalável que é acessível no protocolo SMB (Server Message Block, bloco de mensagens do servidor) padrão do setor. Ele é construído no Windows Server, fornecendo uma ampla gama de recursos administrativos, como cotas de usuário, restauração de arquivos do usuário final e integração do Microsoft Active Directory (AD). Ele oferece opções de implantação single-AZ e multi-AZ, backups totalmente gerenciados e criptografia de dados em repouso e em trânsito. Você pode otimizar o custo e o desempenho para suas necessidades de carga de trabalho com opções de armazenamento SSD e HDD; e você pode dimensionar o armazenamento e alterar o desempenho de throughput do seu sistema de arquivos a qualquer momento. O armazenamento de arquivos DoM do Amazon está acessível a partir de instâncias e dispositivos de computação do Windows, Linux e MacOS em execução no Amazon Web Services ou no local.
+Tipo Bloco:
+Amazon Ebs:
+O Amazon Elastic Block Store (Amazon EBS) oferece volumes de armazenamento em bloco para usar com instâncias do EC2. Os volumes do EBS se comportam como dispositivos de bloco brutos e não formatados. Você pode montar esses volumes como dispositivos em suas instâncias. Os volumes EBS que estão anexados a uma instância são expostos como volumes de armazenamento que persistem independentemente da vida útil da instância. Você pode criar um sistema de arquivos sobre esses volumes ou utilizá-los da maneira que utilizaria um dispositivo de bloco (como um disco rígido). Você pode alterar dinamicamente a configuração de um volume anexado a uma instância.
+O Amazon EBS é recomendado para dados que devem ser rapidamente acessíveis e requerem persistência no longo prazo. Os volumes do EBS são especialmente adequados ao uso como armazenamento principal para sistemas de arquivos, bancos de dados ou para todas as aplicações que necessitem de atualizações granulares finas e acesso ao armazenamento em nível de bloco bruto e não formatado. O Amazon EBS é ideal para aplicações no estilo de banco de dados que utilizam leituras e gravações aleatórias, bem como para aplicações com alta taxa de transferência que executam leituras e gravações longas e contínuas.
+
+
+
+
+
+
+
+
+]
+Tipo Objeto:
+S3
+O AWS S3 (Simple Storage Service) é um serviço de armazenamento de arquivos, também chamados de objetos ou blobs, com foco em escalabilidade, disponibilidade, segurança e performance, tudo isso com um custo extremamente acessível.
+O AWS S3 é um serviço distribuído globalmente dentro da sua conta da AWS, com uma organização em buckets regionais. Isso quer dizer que, diferente das EC2, VPC, e RDS, ao acessar o S3 pelo console da AWS, teremos uma visão global do nosso ambiente, ao invés de uma visão de uma única região.
+Como comentado anteriormente, o AWS S3 se destaca pelo seu custo extremamente acessível. Você só paga pelo armazenamento e transferência de saída dos seus arquivos, com um custo aproximado de cinco centavos para cada gigabyte armazenado, o que é muito mais barato se comparado com o custo de disco EBS de uma EC2 tradicional.
+Databases
+Amazon Aurora
+O Amazon Aurora é um banco de dados relacional compatível com MySQL e PostgreSQL criado para a nuvem e que combina a performance e a disponibilidade de bancos de dados empresariais tradicionais com a simplicidade e a economia de bancos de dados de código aberto.
+O Amazon Aurora é até cinco vezes mais rápido que bancos de dados MySQL padrão e três vezes mais rápido que bancos de dados PostgreSQL padrão. O serviço oferece a segurança, a disponibilidade e a confiabilidade de bancos de dados comerciais por um décimo do custo. O Amazon Aurora é gerenciado pelo Amazon Relational Database Service (RDS), que automatiza tarefas administrativas demoradas como provisionamento de hardware, configuração do banco de dados, aplicação de patches e backups.
+O Amazon Aurora oferece um sistema de armazenamento distribuído, tolerante a falhas e com recuperação automática que escala automaticamente para até 128 TB por instância de banco de dados. Ele oferece altos níveis de performance e disponibilidade, com até 15 réplicas de leitura de baixa latência, recuperação em um ponto anterior no tempo, backup contínuo para o Amazon S3 e replicação entre três zonas de disponibilidade.
+Acesse o Console de Gerenciamento do Amazon RDS para criar sua primeira instância do banco de dados Aurora e começar a migrar bancos de dados MySQL e PostgreSQL.
+Amazon RDS:
+O Amazon Relational Database Service (Amazon RDS) facilita a configuração, a operação e a escalabilidade de bancos de dados relacionais na nuvem. O serviço oferece capacidade com bom custo-benefício e redimensionável, além de automatizar tarefas demoradas de administração, como provisionamento de hardware, configuração de bancos de dados, aplicação de patches e backups. Dessa forma, você pode se concentrar na performance rápida, alta disponibilidade, segurança e conformidade que as aplicações precisam.
+O Amazon RDS está disponível em vários tipos de instância de banco de dados – com otimização para memória, performance ou E/S – e oferece seis mecanismos de bancos de dados comuns, incluindo Amazon Aurora, PostgreSQL, MySQL, MariaDB, Oracle Database e SQL Server. Você pode usar o AWS Database Migration Service para migrar ou replicar facilmente bancos de dados existentes para o Amazon RDS.
+
+
+Amazon Redshift:
+O Amazon Redshift usa SQL para analisar dados estruturados e semiestruturados em data warehouses, bancos de dados operacionais e data lakes, usando hardware e machine learning projetados pela AWS para oferecer a melhor performance de preço em qualquer escala.
+
+
+Amazon ElastiCache:
+O Amazon ElastiCache é um serviço de cache na memória totalmente gerenciado que oferece suporte a casos de uso flexíveis e em tempo real. Você pode usar o ElastiCache para armazenamento em cache, o que acelera a performance de aplicações e bancos de dados, ou como um armazenamento de dados principal para casos de uso que não exigem durabilidade, como armazenamentos de sessões, placares de jogos, streaming e análises. O ElastiCache é compatível com o Redis e o Memcached. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sugiro que em alguns encontros seja abordado de forma resumida temas como projetos e áreas atuantes.
