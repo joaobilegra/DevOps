@@ -9,7 +9,20 @@ bat (nomedoarquivo)- mostra arquivo com mais detalhes de cores e etc
 echo "Welcome to DevoPS class" | sed 's/class/team/' - troca "class" por "team"
 convert nomeimagem.jpg nomeimagem.png- converte imagem de "jpg" para "png"
 nano nomedoarquivo.sh- abre um interpretador de texto com nome do arquivo escolhido pode ser usada para criar script
+-eq =equals, usado para comparar se é igual a algo.
 
+
+
+
+
+
+
+
+**********IF ESTRUTURA***************
+if [condição]
+then
+o que deve ser feito
+fi- final
 
 
 
