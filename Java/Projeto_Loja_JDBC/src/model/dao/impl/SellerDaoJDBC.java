@@ -22,6 +22,7 @@ public class SellerDaoJDBC implements SellerDao{
     public SellerDaoJDBC() {
 	
      }
+    
     private Seller instantiateSeller(ResultSet rs,Department dp ) throws SQLException {
     	 Seller seller= new Seller();
 		 seller.setId(rs.getInt("Id"));
@@ -53,14 +54,13 @@ public class SellerDaoJDBC implements SellerDao{
 					+ "VALUES "
 					+ "(?, ?, ?, ?, ?)",
 					Statement.RETURN_GENERATED_KEYS);
+		     if(findByEmail(obj)==null) {
 		     st.setString(1, obj.getName());
 			 st.setString(2, obj.getEmail());
 			 st.setDate(3, new java.sql.Date(obj.getBirthDate().getTime()));
 			 st.setDouble(4, obj.getBaseSalary());
 			 st.setInt(5, obj.getDepartment().getId());
-				
 			 int rowsAffected = st.executeUpdate();
-	
 				if (rowsAffected > 0) {
 				   rs = st.getGeneratedKeys();
 					if (rs.next()) {
@@ -69,6 +69,8 @@ public class SellerDaoJDBC implements SellerDao{
 					}
                 } 
              } 
+		     else {System.out.println("Cadastro já existe");}
+          }
 				catch(SQLException e) {
     		     throw new DbException(e.getMessage());
     	}
@@ -159,7 +161,7 @@ public class SellerDaoJDBC implements SellerDao{
 		    st=conn.prepareStatement("SELECT seller.*,department.Name as DepName "
 					+ "FROM seller INNER JOIN department "
 					+ "ON seller.DepartmentId = department.Id "
-					+ "ORDER BY Name");
+					+ "ORDER BY Id");
 		    rs= st.executeQuery();
 		    List<Seller> list= new ArrayList<>();
 		    Map<Integer,Department> map= new HashMap<>();
@@ -212,6 +214,31 @@ try(Connection conn= DbConection.conectar();) {
 		  throw new DbException(e.getMessage());
 	  }
 		
+	}
+
+	@Override
+	public Seller findByEmail(Seller seller) {
+		 try(Connection conn= DbConection.conectar();) {
+				PreparedStatement st =null;
+			    ResultSet rs=null;
+			    st=conn.prepareStatement("SELECT seller.*,department.Name as DepName "
+					+ "FROM seller INNER JOIN department "
+					+ "ON seller.DepartmentId = department.Id "
+					+ "WHERE seller.Email = ?");
+			    st.setString(1, seller.getEmail());
+			    rs= st.executeQuery();
+			    if(rs.next()) {
+			      Department dep= instantiateDepartment(rs);
+			      Seller sell= instantiateSeller(rs,dep);
+			
+			       return sell;
+			       }
+			
+			    return null;
+	       }catch(SQLException e) {
+			     throw new DbException(e.getMessage());
+		}
+	
 	}
 
 }

@@ -28,6 +28,8 @@ public class Main_Department {
 	      Department dp2= new Department(null, "Marketing");
 	      dpDao.insert(dp2);
 	      System.out.println(dpDao.findByID(5));
+	      dpDao.deleteByid(6);
+
 	}
 
 }

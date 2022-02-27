@@ -30,10 +30,11 @@ public class Main_Seller {
 	    }
 	    System.out.println("---------------------------------------");
 	    System.out.println("enter a seller:");
-	    Seller seller2 = new Seller (null, "JOAO","JOAO_HOTMAIL",new Date(), 2000,dp);
+	    Seller seller2 = new Seller (null, "Joao Victor","joao-victor@hotmail.com",new Date(), 2000,dp);
 	    SellerDao.insert(seller2);
-	    System.out.println(seller2.getId());
-	    System.out.println(SellerDao.findByID(8));
+	    seller2= new Seller(null, "Joao Victor","joao-victor22@hotmail.com",new Date(), 2000,dp);
+	    SellerDao.insert(seller2);
+	    System.out.println(SellerDao.findByID(17));
 	    System.out.println("---------------------------------------");
 	    System.out.println("updating a seller's registration");
 	    seller= SellerDao.findByID(1);
