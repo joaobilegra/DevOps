@@ -2,7 +2,7 @@
 On the home page, We will have three button options.
 
 
-1- '/config/env'   2-'/env/variable/content'   3-'/list/running_software'
+1- '/config/env'   2-'form'   3-'/list/running_software'
 
 
 each leads to their respective question.
@@ -11,8 +11,8 @@ each leads to their respective question.
 Create a python HTTP service that list all linux env_vars on the http endpoint localhost:8080/conf/env
 
 
-2-'/env/variable/content'
-Create a python script that recives a 2 parameter env_name, env_Var via HTTP and create a linux env_var. Endpoint: localhost:8080/env/$name/$v
+2-'form'
+on the form, fill in the name of the environment variable and its content. clicking save you will be redirected to page /env/namevarible/contents,you will see that in button 1 the variable of your choice is created.
 
 
 3-'/list/running_software'

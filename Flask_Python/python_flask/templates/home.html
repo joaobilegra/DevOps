@@ -38,7 +38,7 @@
         
             <table>
                 <button id="config_env" type="submit" class="botao"><a routerLink="/config/env">config/env</a></button>
-                <button id="env_variable_content" type="submit" class="botao"><a routerLink="/env/variable/content">/env/variable/content</a></button>
+                <button id="form" type="submit" class="botao"><a routerLink='/form'>Form</a></button>
                 <button id="list_running_software" type="submit" class="botao"><a routerLink='/list/running_software'>/list/running_software</a></button>
                    
             </table>
@@ -48,12 +48,13 @@
     document.getElementById('config_env').addEventListener('click', function () {
     window.location.href = '/config/env';
     });
-    document.getElementById('env_variable_content').addEventListener('click', function () {
-    window.location.href = '/env/variable/content';
+    document.getElementById('form').addEventListener('click', function () {
+    window.location.href = '/form';
     });
     document.getElementById('list_running_software').addEventListener('click', function () {
     window.location.href = '/list/running_software';
     });
+   
 
 </script>
 </body>
