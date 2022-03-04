@@ -1,6 +1,6 @@
-from crypt import methods
+
 from urllib import request
-from flask import Flask, render_template , request
+from flask import Flask, render_template,request
 app= Flask(__name__) 
 class Jogo:
     def __init__(self,nome, categoria, console):
@@ -37,6 +37,4 @@ def criar():
    lista.append(jogo)
    return render_template('lista.html', titulo='jogos', jogos =lista)
 
-    
-
-app.run(debug=True)
+app.run(host='0.0.0.0', port=8081)
