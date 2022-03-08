@@ -1,0 +1,29 @@
+
+On the home page, We will have three button options.
+
+
+1- '/config/env'   2-'form'   3-'/list/running_software'
+
+
+each leads to their respective question.
+
+1- '/config/env'
+Create a python HTTP service that list all linux env_vars on the http endpoint localhost:8080/conf/env
+
+
+2-'form'
+on the form, fill in the name of the environment variable and its content. clicking save you will be redirected to page /env/namevarible/contents,you will see that in button 1 the variable of your choice is created.
+
+
+3-'/list/running_software'
+Create a python script that list all running software(PID and cmd) send the list to a slack channel.
+   
+
+feel free to browse through the options.
+
+****************TEMA10****************
+run ./Menu_Docker 
+
+choose your container name
+
+always choose option 1 initially
