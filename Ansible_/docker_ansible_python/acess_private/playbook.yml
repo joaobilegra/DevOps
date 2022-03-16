@@ -1,0 +1,6 @@
+---
+- name: Microservice provision
+  hosts: service
+  roles:
+    - base
+    - aplication

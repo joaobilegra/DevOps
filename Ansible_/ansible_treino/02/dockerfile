@@ -1,0 +1,10 @@
+FROM ubuntu
+RUN apt-get update &&  apt-get install openssh-server -y &&  apt-get install openssh-client -y
+WORKDIR /root/.ssh
+RUN chmod 700 /root/.ssh && chown root:root /root/.ssh
+COPY . .
+RUN chmod 644 id_rsa.pub && chown root:root id_rsa.pub
+RUN chmod 600 id_rsa && chown root:root id_rsa
+RUN cp id_rsa.pub authorized_keys
+RUN chmod 644 authorized_keys && chown root:root authorized_keys
+EXPOSE 22

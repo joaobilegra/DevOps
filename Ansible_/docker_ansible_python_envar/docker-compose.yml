@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+
+  ansible:
+    container_name: ansible
+    privileged: true 
+    hostname: ansible
+    build: 
+      context: .
+      dockerfile: ./acess_private/dockerfile
+    ports:
+        - "22"
+
+  service:
+    container_name: service
+    privileged: true 
+    hostname: service
+    build:
+      context: .
+      dockerfile: ./acess_public/dockerfile 
+    ports:
+      - "22"
+      - "8080"

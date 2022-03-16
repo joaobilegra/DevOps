@@ -1,0 +1,16 @@
+In your project folder
+1- Run 'docker-compose up -d'
+2- Access container 'docker exec -it ansible bash'
+3- Run 'ansible-playbook playbook.yml -i hosts'
+4- If asked type 'yes' to the ssh question
+ 
+
+ ******See your environment being prepared******
+
+ 
+ You can access the service from your browser
+ In 'localhost:port'
+ Check the port on your machine with'docker ps'
+
+
+Docker used version 20.10.12
