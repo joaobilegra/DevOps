@@ -1,0 +1,22 @@
+---
+ - name: 'install all list'
+   apt:
+     name: ['python3','python3-pip','curl']
+     state: latest
+ 
+ - name: 'install pip package' 
+   pip: 
+     name: ['Flask']
+     state: latest
+ 
+ - name: 'start service'
+   shell: cd /home/service && nohup python3 Main.py & 
+
+ - name: 'status service' 
+   shell: export PORT_PY='8080'&& cd /home/service && ./status_service.sh
+   register: dzinfo_output
+   
+ - debug:
+     var: dzinfo_output.stdout_lines
+  
+ 

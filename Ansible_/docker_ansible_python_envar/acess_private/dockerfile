@@ -1,0 +1,14 @@
+FROM ubuntu
+RUN apt-get update && apt-get install openssh-server -y && apt-get install openssh-client -y && apt-get install python3 
+RUN apt-get update && apt install ansible -y 
+RUN service ssh start 
+WORKDIR /root/.ssh/
+RUN chmod 700 /root/.ssh && chown root:root /root/.ssh
+COPY acess_private/id_rsa .
+RUN chmod 600 id_rsa && chown root:root id_rsa
+WORKDIR /home/
+COPY acess_private/playbook.yml .
+COPY acess_private/roles ./roles
+COPY acess_private/hosts .
+EXPOSE 22
+CMD ["/usr/lib/systemd/systemd"]
