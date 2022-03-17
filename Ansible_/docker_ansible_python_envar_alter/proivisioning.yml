@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+     - name: 'install all list'
+       apt:
+          name: "{{ item }}"
+          state: latest
+       loop:
+       - python3
+       - nano   
+      
