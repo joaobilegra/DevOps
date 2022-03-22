@@ -1,0 +1,16 @@
+---
+- hosts: terraform-ansible
+  tasks: 
+  - name: 'install all list'
+    apt:
+      name: ['python3','virtualenv','python3-pip']
+      state: latest
+      update_cache: yes
+    become: yes
+
+  - name: 'install dependency with pip'
+    pip:
+      virtualenv: /home/ubuntu/tcc/venv 
+      name: ['django','djangorestframework']
+
+     
