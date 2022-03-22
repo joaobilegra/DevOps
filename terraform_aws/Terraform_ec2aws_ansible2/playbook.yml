@@ -1,0 +1,8 @@
+- hosts: terraform-ansible
+  tasks: 
+  - name: 'install all list'
+    apt:
+      name: ['python3','telnet','curl']
+      state: latest
+      update_cache: yes
+   become: yes   
