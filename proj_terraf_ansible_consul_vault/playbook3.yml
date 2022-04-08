@@ -1,0 +1,12 @@
+---
+- hosts: vault
+  tasks:
+     - name: 'install curl'
+       shell: sudo apt install curl 
+
+     - name: 'vault1'
+       shell: curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+     - name: 'vault2'
+       shell: sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main" -y
+     - name: 'vault3'
+       shell: sudo apt-get update && sudo apt-get install vault
