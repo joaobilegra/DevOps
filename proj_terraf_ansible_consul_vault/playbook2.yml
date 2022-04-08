@@ -1,0 +1,17 @@
+---
+- hosts: vault
+  tasks:
+     - name: 'install curl'
+       shell: sudo apt install curl 
+
+     - name: 'curl1'
+       shell: curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+     - name: 'curl2'
+       shell: sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main" -y
+     - name: 'curl3'
+       shell: sudo apt-get update && sudo apt-get install consul -y
+     - name: 'cp consul'
+       shell: sudo cp /usr/bin/consul   /usr/local/bin/
+     - name: 'config dir var_consul'
+       shell: sudo mkdir /var/consul && sudo chown consul:consul /var/consul  
+      
